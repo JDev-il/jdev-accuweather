@@ -1,0 +1,23 @@
+<section class="main-wrapper">
+  <div class="componentsDiv">
+    <div class="upperDiv">
+      <div class="searchDiv">
+        <search class="search-wrapper"></search>
+      </div>
+      <div class="defaultForecastDiv">
+        <default-forecast
+          [defaultWeatherName]="TEMPdefaultWeatherName"
+          [defaultWeatherDetails]="TEMPdefaultWeatherDetails"
+        ></default-forecast>
+        <addtofavorites
+        ></addtofavorites>
+      </div>
+    </div>
+    <div class="lowerDiv">
+      <div class="dailyForecastDiv">
+        <daily-forecast 
+        ></daily-forecast>
+      </div>
+    </div>
+  </div>
+</section>

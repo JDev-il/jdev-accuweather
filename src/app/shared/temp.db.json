@@ -1,0 +1,152 @@
+[
+  {
+    "Version": 1,
+    "Key": "213490",
+    "Type": "City",
+    "Rank": 20,
+    "LocalizedName": "Rome",
+    "Country": {
+      "ID": "IT",
+      "LocalizedName": "Italy"
+    },
+    "AdministrativeArea": {
+      "ID": "62",
+      "LocalizedName": "Lazio"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "328220",
+    "Type": "City",
+    "Rank": 55,
+    "LocalizedName": "Rome",
+    "Country": {
+      "ID": "US",
+      "LocalizedName": "United States"
+    },
+    "AdministrativeArea": {
+      "ID": "GA",
+      "LocalizedName": "Georgia"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "338048",
+    "Type": "City",
+    "Rank": 55,
+    "LocalizedName": "Romeoville",
+    "Country": {
+      "ID": "US",
+      "LocalizedName": "United States"
+    },
+    "AdministrativeArea": {
+      "ID": "IL",
+      "LocalizedName": "Illinois"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "334623",
+    "Type": "City",
+    "Rank": 55,
+    "LocalizedName": "Rome",
+    "Country": {
+      "ID": "US",
+      "LocalizedName": "United States"
+    },
+    "AdministrativeArea": {
+      "ID": "NY",
+      "LocalizedName": "New York"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "60148",
+    "Type": "City",
+    "Rank": 65,
+    "LocalizedName": "Romeral",
+    "Country": {
+      "ID": "CL",
+      "LocalizedName": "Chile"
+    },
+    "AdministrativeArea": {
+      "ID": "ML",
+      "LocalizedName": "Maule"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "2724990",
+    "Type": "City",
+    "Rank": 75,
+    "LocalizedName": "Romeirão",
+    "Country": {
+      "ID": "BR",
+      "LocalizedName": "Brazil"
+    },
+    "AdministrativeArea": {
+      "ID": "CE",
+      "LocalizedName": "Ceará"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "124219",
+    "Type": "City",
+    "Rank": 75,
+    "LocalizedName": "Romero",
+    "Country": {
+      "ID": "CU",
+      "LocalizedName": "Cuba"
+    },
+    "AdministrativeArea": {
+      "ID": "04",
+      "LocalizedName": "Matanzas"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "123550",
+    "Type": "City",
+    "Rank": 75,
+    "LocalizedName": "Romero",
+    "Country": {
+      "ID": "CU",
+      "LocalizedName": "Cuba"
+    },
+    "AdministrativeArea": {
+      "ID": "MY",
+      "LocalizedName": "Mayabeque"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "131808",
+    "Type": "City",
+    "Rank": 75,
+    "LocalizedName": "Romerillos",
+    "Country": {
+      "ID": "EC",
+      "LocalizedName": "Ecuador"
+    },
+    "AdministrativeArea": {
+      "ID": "Z",
+      "LocalizedName": "Zamora-Chinchipe"
+    }
+  },
+  {
+    "Version": 1,
+    "Key": "217662",
+    "Type": "City",
+    "Rank": 75,
+    "LocalizedName": "Rome",
+    "Country": {
+      "ID": "JM",
+      "LocalizedName": "Jamaica"
+    },
+    "AdministrativeArea": {
+      "ID": "09",
+      "LocalizedName": "Hanover"
+    }
+  }
+]

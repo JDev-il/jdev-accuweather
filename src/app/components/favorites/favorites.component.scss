@@ -1,0 +1,135 @@
+.favoritesWrapper {
+  max-width: 95%;
+  margin: 30px auto;
+  h1 {
+    margin: 0;
+    text-align: center;
+    color: #402e3241;
+  }
+  .favoritesNotice {
+    margin: 15px 0;
+    h3 {
+      text-align: center;
+      color: #402e32;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        transition: all 0.2s ease-in-out;
+        background-color: #402e32;
+        border: none;
+        box-shadow: 0 5px 7px 0 #ff9500;
+        border-radius: 0.6em;
+
+        &:hover {
+          background-color: #ff9500;
+          border: none;
+          box-shadow: 0 2px 5px -1px #402e32;
+          transform: translateY(3px);
+        }
+      }
+    }
+  }
+
+  .favContainer {
+    height: 100%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    @media (max-width: 1280px){
+      width: 95%;
+    }
+    .forecastsContainer {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .favoriteCardDiv {
+          max-width: 15.8%;
+          border: none;
+          box-shadow: 0 2px 10px -1px #412f3326;
+          border-radius: 0.6em;
+          margin: 7px;
+          @media (max-width: 1280px) {
+            max-width: 25%;
+          }
+          @media (max-width: 768px) {
+            max-width: 45.9999%;
+          }
+          div {
+            justify-content: center;
+            width: 85%;
+            padding: 20px;
+            display: flex;
+            flex-flow: wrap;
+            margin: 0 auto;
+            .favoritesHeader {
+              height: 100%;
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              justify-content: center;
+              padding: 20px 0;
+              h4 {
+                margin: 0;
+                font-size: 18px;
+                color: #402e3273;
+              }
+              p {
+                margin: 0;
+                color: #402e3273;
+              }
+            }
+            .favoritesBody {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              margin: 0;
+              padding: 20px 0;
+              color: #412f33;
+              p{
+                margin: 0;
+              }
+            }
+            .favoriteBtnsDiv {
+              width: 100%;
+              height: 100%;
+              padding: 20px 0;
+              margin: 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              button {
+                cursor: pointer;
+                width: 45%;
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+                border-radius: 0.6em;
+              }
+              .removeForeCastBtn {
+                background-color: red;
+                border: none;
+              }
+              .chooseForeCastBtn {
+                background-color: #402e32;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

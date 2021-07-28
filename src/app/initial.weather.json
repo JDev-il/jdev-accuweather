@@ -1,0 +1,28 @@
+[
+  {
+    "Version": 1,
+    "Key": "215854",
+    "Type": "City",
+    "Rank": 31,
+    "LocalizedName": "Tel Aviv",
+    "Country": { "ID": "IL", "LocalizedName": "Israel" },
+    "AdministrativeArea": { "ID": "TA", "LocalizedName": "Tel Aviv" }
+  },
+  [
+    {
+      "LocalObservationDateTime": "2021-07-03T10:25:00+03:00",
+      "EpochTime": 1625297100,
+      "WeatherText": "Sunny",
+      "WeatherIcon": 1,
+      "HasPrecipitation": false,
+      "PrecipitationType": null,
+      "IsDayTime": true,
+      "Temperature": {
+        "Metric": { "Value": 31.2, "Unit": "C", "UnitType": 17 },
+        "Imperial": { "Value": 88.0, "Unit": "F", "UnitType": 18 }
+      },
+      "MobileLink": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"
+    }
+  ]
+]

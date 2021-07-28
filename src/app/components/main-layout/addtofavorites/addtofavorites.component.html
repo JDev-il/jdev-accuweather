@@ -1,0 +1,14 @@
+<div [ngClass]="weatherService.addToFavoritesBtn ? 'blockAllClicks addToFavDiv' : 'addToFavDiv'">
+  <p-button
+    [disabled]="weatherService.addToFavoritesBtn"
+    [label]="weatherService.addToFavoritesText"
+    [icon]="weatherService.icon"
+    iconPos="left"
+    [ngClass]="
+      weatherService.addToFavoritesBtn
+        ? 'addToFavBtnColor1'
+        : 'addToFavBtnColor2'
+    "
+    (onClick)="addForecast()"
+  ></p-button>
+</div>

@@ -1,0 +1,53 @@
+<div class="spinnerDiv" *ngIf="show">
+  <p-progressSpinner
+    [style]="{ width: '55px', height: '55px' }"
+    styleClass="custom-spinner"
+    strokeWidth="4"
+    animationDuration=".5s"
+  ></p-progressSpinner>
+</div>
+<div class="favoritesWrapper">
+  <h1>Favorite Forecasts</h1>
+  <div *ngIf="!weatherService.getFavorites.length" class="favoritesNotice">
+    <h3>No forecasts were found..</h3>
+    <div>
+      <button pButton type="button" (click)="sendBackToMain()">Add Now</button>
+    </div>
+  </div>
+  <div class="favContainer">
+    <div class="forecastsContainer">
+      <div>
+        <div
+          *ngFor="let weather of weatherService.getFavorites"
+          class="favoriteCardDiv"
+        >
+          <div>
+            <div class="favoritesHeader">
+              <h4>{{ weather.city }}</h4>
+              <p>{{ weather.temperature?.Metric?.Value }} °C</p>
+            </div>
+            <div class="favoritesBody">
+              <p>{{ weather.status }}</p>
+            </div>
+            <div class="favoriteBtnsDiv">
+              <button
+                type="button"
+                class="chooseForeCastBtn"
+                (click)="showSelectedForecast(weather)"                
+              >
+                Enlarge
+              </button>
+              <button
+                type="button"
+                class="removeForeCastBtn"
+                (click)="removeForeCast(weather)"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

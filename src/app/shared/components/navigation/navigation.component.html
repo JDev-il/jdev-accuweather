@@ -1,0 +1,27 @@
+<div class="navWrapper">
+  <nav class="navigation">
+    <span><a routerLink="/">Weather Task</a></span>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="fromPageFavorites()"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/favorites"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >
+          Favorites
+          </a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

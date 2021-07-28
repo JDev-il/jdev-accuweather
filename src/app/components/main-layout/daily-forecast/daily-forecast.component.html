@@ -1,0 +1,129 @@
+<div class="cardsWrapper">
+  <div class="spinnerDiv" *ngIf="show">
+    <p-progressSpinner
+      [style]="{ width: '55px', height: '55px' }"
+      styleClass="custom-spinner"
+      strokeWidth="4"
+      animationDuration=".5s"
+    ></p-progressSpinner>
+  </div>
+  <div
+    class="isWeatherNoData"
+    *ngIf="
+      !weatherService.getWeatherByLoaction.length &&
+      !weatherService.getFavorites.length
+    "
+  >
+    <h1>No forecasts yet..</h1>
+  </div>
+
+  <div class="isWeatherDiv">
+    <!--Forecast Results-->
+    <div class="cityChoosingDiv">
+      <div class="notice" *ngIf="weatherService.showText">
+        <h2>
+          Results for <b>{{ weatherService.searchQuery | titlecase }}</b
+          >:
+        </h2>
+      </div>
+      <div
+        class="pCardWrapper"
+        *ngIf="
+          !weatherService.getDailyWeather.length &&
+          weatherService.getWeatherByLoaction.length &&
+          !weatherService.showChosenForecast
+        "
+      >
+        <div
+          class="cardDiv"
+          [ngStyle]="
+            weatherService.locationWeather.length < 2
+              ? cardDivStyle.alt
+              : cardDivStyle.std
+          "
+        >
+          <p-card
+            *ngFor="let weather of weatherService.getWeatherByLoaction"
+            (click)="chosenCity(weather)"
+          >
+            <div class="foreCastInfoDiv">
+              <div class="p-card-header">
+                <h1>{{ weather.LocalizedName }}</h1>
+              </div>
+              <div class="p-card-body">
+                <p>{{ weather.Country?.LocalizedName }}</p>
+              </div>
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </div>
+    <!--Forecast Results-->
+
+    <!--5 Days ForeCast -->
+    <div class="dailyWeatherDiv" *ngIf="weatherService.getDailyWeather.length">
+      <div class="weatherDesc">
+        <h1>{{ weatherService.currentWeather.city }}</h1>
+        <h3>
+          {{ weatherService.currentWeather.temperature?.Metric?.Value }} °C
+        </h3>
+      </div>
+      <div class="dailyContainer" *ngIf="weatherService.selectedWeather">
+        <div
+          *ngFor="let weather of weatherService.getDailyWeather"
+          class="dailyCardDiv"
+        >
+          <p-card>
+            <div class="p-card-header">
+              <h1>{{ weatherService.currentWeather.city }}</h1>
+            </div>
+            <div class="p-card-content">
+              <div class="temperatureDiv">
+                <h1>
+                  <span
+                    >{{
+                      weather.Temperature?.Minimum?.Value | fahrenheitToCelsius
+                    }}
+                  </span>
+                  <span
+                    >-
+                    {{
+                      weather.Temperature?.Maximum?.Value | fahrenheitToCelsius
+                    }}
+                    °C</span
+                  >
+                </h1>
+              </div>
+            </div>
+            <div class="p-card-body">
+              <p>{{ weather.Date | date: "MM/dd/yy" }}</p>
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </div>
+    <!--5 Days ForeCast -->
+
+    <!-- Chosen Weather From Favorites -->
+    <div
+      class="currentWeatherDiv"
+      *ngIf="
+        !weatherService.getDailyWeather.length &&
+        !weatherService.getWeatherByLoaction.length
+      "
+    >
+      <div
+        class="currentWeatherDesc"
+        *ngIf="weatherService.getFavorites.length"
+      >
+        <h1>{{ weatherService.selectedWeather.city }}</h1>
+        <br />
+        <h3>
+          {{ weatherService.selectedWeather.temperature?.Metric?.Value }}
+          <span *ngIf="weatherService.getFavorites.length">°C</span>
+        </h3>
+      </div>
+    </div>
+    <!-- Chosen Weather From Favorites -->
+  </div>
+</div>

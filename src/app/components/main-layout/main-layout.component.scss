@@ -1,0 +1,45 @@
+section.main-wrapper {
+  width: 100%;
+  .componentsDiv{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .upperDiv{
+      .searchDiv {
+        padding: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .defaultForecastDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+        max-width: 65%;
+        margin: 10px auto;
+        @media (max-width: 992px){
+          max-width: 75%;
+        }
+        default-forecast, addtofavorites {
+          width: 25%;
+        }
+      }
+    }
+    .lowerDiv{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      .dailyForecastDiv {
+        width: 65%;
+        @media (max-width: 1440px){
+          width: 85%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
