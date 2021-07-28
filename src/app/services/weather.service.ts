@@ -66,7 +66,7 @@ export class WeatherService {
 
   /* Private Variables & Observables
   -------------------------------------------------- */
-  private path = environment.accurateWeather;
+  private path = "http://dataservice.accuweather.com/";
 
   // @Observables //
   private LoadingSource = new Subject<boolean>();
