@@ -16,6 +16,7 @@ export class DefaultForecastComponent implements OnInit {
   constructor(public weatherService: WeatherService) { }
 
   ngOnInit(): void {
+    
   }
 
 }

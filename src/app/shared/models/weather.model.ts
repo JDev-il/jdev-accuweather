@@ -16,6 +16,7 @@ export class WeatherModel {
             Unit: any,
             UnitType: any}
     };
+    weatherText?: string;
     date?: Date;
     status?: string;
 

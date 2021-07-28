@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { WeatherService } from 'src/app/services/weather.service';
 
 
@@ -7,30 +8,27 @@ import { WeatherService } from 'src/app/services/weather.service';
   selector: 'main-layout',
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
 })
 export class MainLayoutComponent implements OnInit {
 
-
-  //! TEMPORARY WEATHER
-  TEMPdefaultWeatherName?: string;
-  TEMPdefaultWeatherDetails?: number;
-
-
+  defaultWeatherName?: string;
+  defaultWeatherDetails?: number;
+  
+  initialWeather?: Subscription;
 
   constructor(
     public weatherService: WeatherService,
     public router: Router
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     const ws = this.weatherService;
-    this.TEMPdefaultWeatherName = ws.initialWeatherTempName.LocalizedName
-    this.TEMPdefaultWeatherDetails = ws.initialWeatherTempDetails.Temperature.Metric.Value;
-    ws.showChosenForecast = false;
-    // ws.getLocation().then(()=>{
-
-    // })
+    await ws.getLocation().then(()=>{
+     this.initialWeather = ws.weatherInit$.subscribe(res =>{
+      this.defaultWeatherName = res.city
+      this.defaultWeatherDetails = res.temperature?.Metric.Value       
+     })
+    })
   }
 
 }

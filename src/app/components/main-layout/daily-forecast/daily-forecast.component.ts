@@ -42,7 +42,7 @@ export class DailyForecastComponent implements OnInit {
 
   ngOnInit(): void {
     const ws = this.weatherService;
-    this.subscribe = ws.forecastLoaderSource$.subscribe(forecast => {
+    this.subscribe = ws.forecastLoader$.subscribe(forecast => {
       if (forecast) {
         this.show = true
         ws.showText = true;
@@ -53,17 +53,7 @@ export class DailyForecastComponent implements OnInit {
         this.hideDailyForecast = false;
         ws.showText = false;
       }      
-    })
-    this.loadingSubscription = ws.loading$.subscribe((load) => {
-      // if (load) {
-      //   this.weatherService.addToFavoritesBtn = true;
-      //   this.show = true;          
-      // } else {
-      //   setTimeout(() => {
-      //     this.show = false;
-      //   }, 1000);
-      // }
-    })    
+    }) 
   }
 
   async chosenCity(cityKey: any) {
